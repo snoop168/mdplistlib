@@ -10,6 +10,11 @@ setup(
     author_email="jfhyla@gmail.com",
     url="https://github.com/snoop168/mdplistlib",
     packages=find_packages(),
+    entry_points={
+        "console_scripts": [
+            "mdplist-cli=mdplist.mdplist_cli:main",
+        ],
+    },
     python_requires=">=3.6",
     license="MIT",
     classifiers=[

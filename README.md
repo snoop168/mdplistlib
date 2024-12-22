@@ -37,3 +37,14 @@ with open('example.file') as file:
     # Load a file and parse its contents
     parsed_data = mdplist.loads(data)
     print(parsed_data)
+
+```
+
+## Command Line Usage
+
+### Parse File
+```bash
+python mdplist_cli.py /path/to/file.mdplist
+```
+
+Above command will create a new file at `/path/to/file.json`
