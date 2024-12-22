@@ -14,7 +14,7 @@ You can install `mdplistlib` via pip:
 pip install mdplistlib
 ```
 
-## Usage
+## Code Usage
 
 ### Parse File
 ```python
