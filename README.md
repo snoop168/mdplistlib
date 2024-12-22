@@ -43,8 +43,10 @@ with open('example.file') as file:
 ## Command Line Usage
 
 ### Parse File
+
+After installing with pip use the command line entry point as shown below.
 ```bash
-python mdplist_cli.py /path/to/file.mdplist
+mdplist-cli /path/to/file.mdplist
 ```
 
 Above command will create a new file at `/path/to/file.json`
