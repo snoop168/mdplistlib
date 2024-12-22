@@ -2,6 +2,21 @@ from mdplist import load
 import argparse
 import os
 import json
+import datetime
+
+
+def clean_data(obj):
+    if isinstance(obj, dict):
+        return {key: clean_data(val) for key, val in obj.items()}
+    elif isinstance(obj, list):
+        return [clean_data(item) for item in obj]
+    elif isinstance(obj, datetime.datetime):
+        return obj.isoformat()
+    elif isinstance(obj, bytes):
+        return str(obj)
+    else:
+        return obj
+
 
 def main():
     # Parse the arguments
@@ -18,7 +33,7 @@ def main():
         return
 
     try:
-        output_data = load(input_file)
+        output_data = clean_data(load(input_file))
     except Exception as e:
         print(f"Error processing file: {e}")
         return

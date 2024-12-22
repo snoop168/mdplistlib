@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="mdplistlib",
-    version="0.1.1",
+    version="0.1.3",
     description="A library for parsing DEBA/MDPLIST files.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
